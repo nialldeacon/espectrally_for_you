@@ -53,7 +53,7 @@ for i0 in range(0,width):
         value=100*hsv[2]/255.0
         #define numpy arrays for colour and a flat white spectrum
         colour_array=np.zeros(wavelengths.shape)
-        white_array=np.ones(wavelengths.shape)*3.0/len(wavelengths) #this is normalised so that the amount of white light integrated over all wavelengths is the same as the amount coloured light at one wavelength (see below). In a later part we will mix the coloured and white light. Note I am multiplying by 3 here to take account the fact that an RGB green with 50% saturation will have a white/grey component that has a value of 50 in all three colours
+        white_array=np.ones(wavelengths.shape)*3.0/len(wavelengths) #this is normalised so that the amount of white light integrated over all wavelengths is the same as the amount coloured light at one wavelength (see below). In a later part we will mix the coloured and white light. Note I am multiplying by 3 here to take account the fact that an RGB green with 0% saturation will have a white/grey component that has a value of 1 in all three colours (i.e. sum this up and you get 3). This means that if you summed all of the white light it would have an intensity of 3.
         #find the wavelength for the hue of this pixel and set the colour array for that wavelength to one
         wavelength_tmp=hue_to_wavelength(hue)
         if wavelength_tmp:

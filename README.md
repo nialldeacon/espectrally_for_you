@@ -13,7 +13,7 @@ The code loops over all pixels in the image and builts up a "spectrum" by summin
 This total spectrum is then plotted along with a colour bar to show what colour is what wavelength.
 
 # Caveats
-Obviously this is not a scientifically accurate spectrum of the image. It is intended to get people thinking spectrally, how colours might appear on a spectrum, how much a grey continuum dominates compared to a strong colour. Obviously this should never be used for scientific purposes.
+Obviously this is not a scientifically accurate spectrum of the image. It is intended to get people thinking spectrally, how colours might appear on a spectrum, how much a grey continuum dominates compared to a strong colour. Obviously this should never be used for scientific purposes. 
 
 # Licences
 I've included the code here, it's under an MIT license. I've put a few example images in the images folder. These are under difference licenses, see the credits and licenses document in the image folder

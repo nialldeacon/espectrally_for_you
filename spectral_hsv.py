@@ -35,8 +35,8 @@ lambda_min=390
 lambda_max=701
 
 #open the input image and define the output file
-img_tmp=Image.open('/Users/deacon/temp/SDSS_temp/hsv_images/Eurasian_blue_tit_Lancashire.jpg')
-outfile='/Users/deacon/temp/SDSS_temp/hsv_images/Eurasian_blue_tit_Lancashire_plot.png'
+img_tmp=Image.open('/Users/deacon/temp/SDSS_temp/hsv_images/Flag_of_Germany.svg.png')
+outfile='/Users/deacon/temp/SDSS_temp/hsv_images/Flag_of_Germany_plot.png'
 #convert image from RGB to HSV
 hsv_image=img_tmp.convert('HSV')
 width, height = hsv_image.size
@@ -53,7 +53,7 @@ for i0 in range(0,width):
         value=100*hsv[2]/255.0
         #define numpy arrays for colour and a flat white spectrum
         colour_array=np.zeros(wavelengths.shape)
-        white_array=np.ones(wavelengths.shape)
+        white_array=np.ones(wavelengths.shape)*3.0/len(wavelengths) #this is normalised so that the amount of white light integrated over all wavelengths is the same as the amount coloured light at one wavelength (see below). In a later part we will mix the coloured and white light. Note I am multiplying by 3 here to take account the fact that an RGB green with 50% saturation will have a white/grey component that has a value of 50 in all three colours
         #find the wavelength for the hue of this pixel and set the colour array for that wavelength to one
         wavelength_tmp=hue_to_wavelength(hue)
         if wavelength_tmp:
